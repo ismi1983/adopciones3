@@ -10,3 +10,12 @@
 .collapse-menu:hover{
     color: #000;
 }
+
+.nav-text a{
+    color: #fff;
+
+}
+
+.nav-text a:hover{
+    color: teal;
+}
