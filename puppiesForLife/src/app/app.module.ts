@@ -20,7 +20,9 @@ const routes: Routes = [
     component: LoginComponent
   }
 ]
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { SignupComponent } from './components/signup/signup.component';
+import { RegisterDogsComponent } from './components/register-dogs/register-dogs.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HttpClientModule} from '@angular/common/http'
     NavBarComponent,
     HomeComponent,
     TableroComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    RegisterDogsComponent
   ],
   imports: [
     BrowserModule,
