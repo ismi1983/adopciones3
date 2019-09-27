@@ -1,13 +1,22 @@
 
+
 .card{
     /* width:90%; */
     padding:0;
-    background-color: rgba(0, 128, 128, 0.8);
+    background-color: rgba(0, 128, 128, 0.7);
     color:white;
     border-radius: 20px;
+    border:0px;
 }
 
 
 .card img{
     border-radius: 20px 20px 0px 0px;
+
+}
+
+.crop-img{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
 }
