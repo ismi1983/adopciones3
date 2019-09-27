@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DogsService } from '../../services/dogs.service'
+import { Dog} from '../../models/dogs'
 
 @Component({
   selector: 'app-tablero',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableroComponent implements OnInit {
 
-  constructor() { }
+  constructor( private dogService:DogsService ) { }
+
+dogs$:Dog[];
+
+  getDogs():void{
+    this.dogService.getDogs().subscribe(dogs => this.dogs$ = dogs);
+  };
+
+
 
   ngOnInit() {
+   this.getDogs();
   }
+
+
+
 
 }

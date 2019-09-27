@@ -1,18 +1,18 @@
 
     <div class="album py-5 ">
-        <div class="container ">
+        <div class="container">
 
-          <div class="row">
-            <div class="col-md-4 center-block">
+          <div class="row " >
+            <div class="col-md-4 center-block card-deck" *ngFor="let dog of dogs$ ">
               <div class="card mb-3 box-shadow "> 
-                <img class="card-img-top" src="https://www.petmd.com/sites/default/files/CANS_dogsmiling_379727605.jpg" alt="Card image cap">
+                <img class="card-img-top crop-img" src="{{dog.imgUrl}}" alt="Card image cap">
                 <div class="card-body "> 
-                <h5 class="card-title">Buddy</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{dog.name}}</h5>
+                  <p class="card-text">{{dog.description}}</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <div class="card mb-2 box-shadow">
                 <img class="card-img-top" src="https://www.petmd.com/sites/default/files/CANS_dogsmiling_379727605.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -48,8 +48,8 @@
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <!-- <div class="col-md-4">
               <div class="card mb-2 box-shadow">
                 <img class="card-img-top" src="https://www.petmd.com/sites/default/files/CANS_dogsmiling_379727605.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -57,7 +57,7 @@
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

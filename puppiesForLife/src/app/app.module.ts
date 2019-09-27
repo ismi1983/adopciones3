@@ -20,6 +20,7 @@ const routes: Routes = [
     component: LoginComponent
   }
 ]
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ const routes: Routes = [
     FontAwesomeModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
