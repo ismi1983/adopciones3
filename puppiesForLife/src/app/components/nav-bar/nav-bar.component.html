@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-transparent p-0 text-white nav-text shadowed mb-5">
+<nav
+  class="navbar navbar-expand-lg sticky-top navbar-dark navbar-bgDark p-0 text-white nav-text mb-5"
+>
   <div class="navbar-brand p-2">
-    <a class="navbar-brand"routerLink="/home">
+    <a class="navbar-brand" routerLink="/home">
       <img
         src="assets/img/dog-house.svg"
         alt="Puppies for life logo"
@@ -20,15 +22,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   </div>
-  <div class="collapse navbar-collapse justify-content-end align-items-end pl-2" id="navbarNav">
+  <div
+    class="collapse navbar-collapse justify-content-end align-items-end pl-2"
+    id="navbarNav"
+  >
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" routerLink= "/home"
+        <a class="nav-link" routerLink="/home"
           >Inicio <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink= "/adopcion">Adopción</a>
+        <a class="nav-link" routerLink="/adopcion">Adopción</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><fa-icon [icon]="faFacebook"></fa-icon></a>
@@ -37,7 +42,9 @@
         <a class="nav-link" href="#"><fa-icon [icon]="faTwitter"></fa-icon></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><fa-icon [icon]="faInstagram"></fa-icon></a>
+        <a class="nav-link" href="#"
+          ><fa-icon [icon]="faInstagram"></fa-icon
+        ></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><fa-icon [icon]="faYoutube"></fa-icon> </a>
@@ -46,11 +53,24 @@
         <a class="nav-link font-weight-bold" href="#">Dona</a>
       </li>
     </ul>
-    <button
-      class="btn btn-outline-secondary bg-white p-3 rounded-0 border-0 dropdown m-0"
-      type="button"
-    >
-      <span class=""><fa-icon [icon]="faBars"></fa-icon></span>
-    </button>
+    <div class="dropdown dropleft">
+      <button
+        class="btn bg-white p-3 rounded-0 border-0 m-0 dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <span class=""><fa-icon [icon]="faBars"></fa-icon></span>
+      </button>
+      <div
+        class="dropdown-menu navbar-bgDark"
+        aria-labelledby="dropdownMenuButton"
+      >
+        <a class="dropdown-item" routerLink="/login">Iniciar sesión</a>
+        <a class="dropdown-item" href="/signup">Registrarse</a>
+      </div>
+    </div>
   </div>
 </nav>

@@ -17,13 +17,10 @@ dogs$:Dog[];
     this.dogService.getDogs().subscribe(dogs => this.dogs$ = dogs);
   };
 
-
-
   ngOnInit() {
    this.getDogs();
   }
 
-
-
+  
 
 }

@@ -22,13 +22,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onLogin(){
-    if(this.loginForm.valid){
+  msjLogin:string;
+  onLogin(data:FormGroup):void{
+    if(data.valid){
 
     }else{
-      alert("Wrong credentials")
+    this.msjLogin = 'El usuario o la contrseña no coinciden.';
     }
   }
+
+
 
 }

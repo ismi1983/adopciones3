@@ -58,7 +58,7 @@ margin-bottom: 35px;
     color: #c2fbfe;
 }
 
-
-
-
-
+.alert-icon{
+    width: 3em;
+    padding-right: 2px;
+}

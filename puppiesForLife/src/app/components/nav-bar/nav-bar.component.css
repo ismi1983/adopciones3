@@ -19,10 +19,27 @@
   color: #fff;
 }
 
+.navbar-bgDark {
+  background-color: #3b4652;
+}
 .nav-text a:hover {
   color: #00dbc5;
 }
 
 .shadowed {
   background-image: linear-gradient(rgba(0, 0, 0, 0.80),rgba(0, 0, 0, 0.25) ); 
+}
+
+
+@media screen and (max-width: 990px){
+  .navbar-expand-lg{
+    text-align: center;
+    justify-content: center;
+  }
+  .dropdown{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 7%;
+  }
 }
