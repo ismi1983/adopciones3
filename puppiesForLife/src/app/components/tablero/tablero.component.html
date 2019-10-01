@@ -9,6 +9,7 @@
                 <div class="card-body "> 
                 <h5 class="card-title">{{dog.name}}</h5>
                   <p class="card-text">{{dog.description}}</p>
+                  <button class="btn btn-danger" (click)="deleteDog(dog)"><fa-icon [icon]="faTrash"></button>
                 </div>
               </div>
             </div>
