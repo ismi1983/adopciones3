@@ -30,7 +30,6 @@ formDog: FormGroup = new FormGroup({
     let form = this.formDog;
 
 
-    console.log(form.value);
 
     if(!form.valid){
       alert('Data not valid');
@@ -43,8 +42,6 @@ formDog: FormGroup = new FormGroup({
   private submitData(form:Dog):void{
     this.dogService.createDog(form)
     .subscribe(data => {
-      console.log(data);
-      debugger;
     })
   }
 
