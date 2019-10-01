@@ -13,10 +13,13 @@ export class DogsService {
 
   constructor(private http:HttpClient) { }
 
-getDogs():Observable<Dog[]>{
-  console.log(this.http.get<Dog[]>(environment.apiUrl))
-return this.http.get<Dog[]>(environment.apiUrl); 
+public getDogs():Observable<Dog[]>{
+  console.log(this.http.get<Dog[]>(environment.apiUrl));
+  return this.http.get<Dog[]>(environment.apiUrl); 
+}
 
+public createDog(dog:Dog):Observable<Dog>{
+  return this.http.post<Dog>(environment.apiUrl, dog);
 }
 
 
