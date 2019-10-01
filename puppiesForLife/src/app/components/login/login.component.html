@@ -18,15 +18,19 @@
 </div> -->
 
 <div class="modal-dialog text-center">
+    <ng-container *ngIf=" msjLogin ">
+        <div class="alert alert-danger" role="alert">
+           <img src="assets/img/kitty.svg" alt="Mad Kitty" class="alert-icon"> {{ msjLogin }}
+          </div>
+    </ng-container>
   <div class="col-sm-8 main-section">
     <div class="modal-content">
-
 
       <div class="col-12 user-img">
         <img src="http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/256/22214-dog-face-icon.png">
 
       </div>
-      <form class="col-12">
+      <form class="col-12" [formGroup]="loginForm"(ngSubmit)="onLogin(loginForm)">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Enter Username" formControlName="email">
         </div>
