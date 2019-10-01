@@ -8,6 +8,7 @@ import { CssSelector } from "@angular/compiler";
 @Injectable({
   providedIn: "root"
 })
+
 export class DogsService {
   httpOptions = {
     headers: new HttpHeaders({'Content-Type':'applicaation/json'})
@@ -30,4 +31,5 @@ export class DogsService {
 
 public createDog(dog:Dog):Observable<Dog>{
   return this.http.post<Dog>(environment.apiUrl, dog);
+}
 }
