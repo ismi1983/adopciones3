@@ -22,8 +22,12 @@ export class DogsService {
     // console.log('Dog has been is erased');
   }
 
-  getDogs(): Observable<Dog[]> {
+  public getDogs(): Observable<Dog[]> {
     console.log(this.http.get<Dog[]>(environment.apiUrl));
     return this.http.get<Dog[]>(environment.apiUrl);
   }
+
+
+public createDog(dog:Dog):Observable<Dog>{
+  return this.http.post<Dog>(environment.apiUrl, dog);
 }
