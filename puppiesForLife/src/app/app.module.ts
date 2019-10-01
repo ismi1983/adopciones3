@@ -10,22 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { TableroComponent } from './components/tablero/tablero.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
-
-
-
-
-const routes: Routes = [
-
-  {
-    path: "login",
-    component: LoginComponent
-  },
-  {
-
-    path: "register",
-    component: RegisterDogsComponent
-  }
-]
 import { HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { RegisterDogsComponent } from './components/register-dogs/register-dogs.component'
