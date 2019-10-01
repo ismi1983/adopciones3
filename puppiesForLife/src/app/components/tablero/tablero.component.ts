@@ -17,10 +17,11 @@ dogs$:Dog[];
     this.dogService.getDogs().subscribe(dogs => this.dogs$ = dogs);
   };
 
-  ngOnInit() {
+  ngOnInit():void {
    this.getDogs();
   }
-
-  
-
+  deleteDog(dog:Dog):void{ 
+    this.dogs$ = this.dogs$.filter(d => d !== dog);   
+    this.dogService.deleteDog(dog).subscribe();
+  }
 }
