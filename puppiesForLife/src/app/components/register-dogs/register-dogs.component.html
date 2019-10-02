@@ -1,5 +1,5 @@
 <div class="container mb-5">
-  <div class="row-sm-5">
+  <div class="row">
     <div class="col-sm-6 main-section">
       <div class="card">
         <div class="card-body">
@@ -8,18 +8,18 @@
             <div class="title">
               <h3>Registrar perro</h3>
             </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="form-group">
+            <div class="form-row">
+             
+                <div class="form-group col-sm-6">
                   <label>Nombre</label>
                   <input type="text" formControlName="firstName" class="form-control">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group col-sm-6">
                   <label>Edad (años/meses)</label>
                   <input type="number" formControlName="edad" class="form-control">
                 </div>
-                <div class="form-group">
+                <div class="form-group col-sm-6">
                   <label for="Select1">Sexo</label>
                   <select class="form-control">
                     <option>Macho</option>
@@ -28,19 +28,18 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Agregar una imagen</label>
+                    <input type="text" formControlName="profileImg" class="form-control">
+                  </div>
+
+                <div class="form-group col-sm-12">
                   <label for="lTextarea1">Descripción</label>
                   <textarea class="form-control" rows="3"></textarea>
                 </div>
 
-                <div class="form-group">
-                  <label>Agregar una imagen</label>
-                  <input type="text" formControlName="profileImg" class="form-control">
-                </div>
+               
 
               </div>
-
-
-            </div>
 
             <div class="row">
               <div class="col-12">
