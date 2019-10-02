@@ -3,7 +3,7 @@
     <div class="col-sm-6 main-section">
       <div class="card">
         <div class="card-body">
-          <form [formGroup]="formPerson" (ngSubmit)='submit()'>
+          <form [formGroup]="formDog" (ngSubmit)='submit()'>
 
             <div class="title">
               <h3>Registrar perro</h3>
@@ -12,16 +12,16 @@
              
                 <div class="form-group col-sm-6">
                   <label>Nombre</label>
-                  <input type="text" formControlName="firstName" class="form-control">
+                  <input type="text" formControlName="name" class="form-control">
                 </div>
 
                 <div class="form-group col-sm-6">
                   <label>Edad (años/meses)</label>
-                  <input type="number" formControlName="edad" class="form-control">
+                  <input type="number" formControlName="age" class="form-control">
                 </div>
                 <div class="form-group col-sm-6">
                   <label for="Select1">Sexo</label>
-                  <select class="form-control">
+                  <select formControlName="sex" class="form-control">
                     <option>Macho</option>
                     <option>Hembra</option>
                   </select>
@@ -34,7 +34,7 @@
 
                 <div class="form-group col-sm-12">
                   <label for="lTextarea1">Descripción</label>
-                  <textarea class="form-control" rows="3"></textarea>
+                  <textarea formControlName="description" class="form-control" rows="3"></textarea>
                 </div>
 
                
