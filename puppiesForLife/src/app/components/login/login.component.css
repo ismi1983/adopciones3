@@ -62,3 +62,17 @@ margin-bottom: 35px;
     width: 3em;
     padding-right: 2px;
 }
+
+.alert-danger{
+    background-color:#27c2a5;
+    border: #27c2a5; 
+    color:white;
+    width: 27%;
+    float: right;
+    margin-right: 109px;
+    margin-top: 119px;
+   
+
+
+}
+
