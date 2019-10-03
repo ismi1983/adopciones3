@@ -1,23 +1,24 @@
-
-    <div class="album py-5 ">
-        <div class="container">
-
-          <div class="row " >
-            <div class="col-md-4 center-block card-deck" *ngFor="let dog of dogs$ ">
-              <div class="card mb-3 box-shadow "> 
-                <img class="card-img-top crop-img" src="{{dog.imgUrl}}" alt="Card image cap">
-                <div class="card-body "> 
-                <h5 class="card-title">{{dog.name}}</h5>
-                  <p class="card-text">{{dog.description}}</p>
-                  
-                </div>
-                <button 
-                  class="btn btn-danger" (click)="deleteDog(dog)"><span>
-                    <fa-icon [icon]="faTrash"></fa-icon>
-                  </span>
-                </button>
-              </div>
-            </div>
+<div class="album py-5 ">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-4 center-block card-deck" *ngFor="let dog of dogs$">
+        <div class="card mb-3 box-shadow ">
+          <img
+            class="card-img-top crop-img"
+            src="{{ dog.imgUrl }}"
+            alt="Card image cap"
+          />
+          <div class="card-body ">
+            <h5 class="card-title">{{ dog.name }}</h5>
+            <p class="card-text">{{ dog.description }}</p>
           </div>
+          <button class="btn btn-danger" (click)="deleteDog(dog)">
+            <span>
+              <fa-icon [icon]="faTrash"></fa-icon>
+            </span>
+          </button>
         </div>
       </div>
+    </div>
+  </div>
+</div>

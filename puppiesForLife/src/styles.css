@@ -1,23 +1,25 @@
-html, body{
-    height: 90%;
-    width: 100%;
-    border: 0px;
-    margin:0px;
+html,
+body {
+  height: 90%;
+  width: 100%;
+  border: 0px;
+  margin: 0px;
 }
 
-body{
-    background:url('https://www.rachaelrayshow.com/sites/default/files/styles/video_1920x1080/public/images/2019-06/dog.jpg?itok=mFEHYdZh') fixed;
-    background-size: cover;
-    height: 100%;
+body {
+  background: url('https://www.rachaelrayshow.com/sites/default/files/styles/video_1920x1080/public/images/2019-06/dog.jpg?itok=mFEHYdZh') fixed;
+  background-size: cover;
+  height: 100%;
 }
 
-body::before{
-background-attachment: fixed;
-position: fixed;
-content: '';
-height: 100%;
-width: 100%;
-background-color: rgba(0, 0, 0, 0.25);
-top:0; left:0;
-z-index:-1;
+body::before {
+  background-attachment: fixed;
+  position: fixed;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TableroComponent } from './tablero.component';
+import { TableroComponent } from "./tablero.component";
 
-describe('TableroComponent', () => {
+describe("TableroComponent", () => {
   let component: TableroComponent;
   let fixture: ComponentFixture<TableroComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TableroComponent ]
-    })
-    .compileComponents();
+      declarations: [TableroComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('TableroComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
