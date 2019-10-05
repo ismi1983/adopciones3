@@ -11,9 +11,20 @@ import { TableroComponent } from "./components/tablero/tablero.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./components/login/login.component";
 
+<<<<<<< HEAD
 import { HttpClientModule } from "@angular/common/http";
 import { SignupComponent } from "./components/signup/signup.component";
 import { RegisterDogsComponent } from "./components/register-dogs/register-dogs.component";
+=======
+
+
+
+
+import { HttpClientModule} from '@angular/common/http';
+import { SignupComponent } from './components/signup/signup.component';
+import { RegisterDogsComponent } from './components/register-dogs/register-dogs.component'
+import { AuthGuard } from './auth.guard';
+>>>>>>> b7d27347f425e07bf9a925e9cd94a2a23e664fbd
 
 @NgModule({
   declarations: [
@@ -33,7 +44,7 @@ import { RegisterDogsComponent } from "./components/register-dogs/register-dogs.
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

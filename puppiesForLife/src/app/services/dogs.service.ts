@@ -10,8 +10,13 @@ import { CssSelector } from "@angular/compiler";
 })
 export class DogsService {
   httpOptions = {
+<<<<<<< HEAD
     headers: new HttpHeaders({ "Content-Type": "applicaation/json" })
   };
+=======
+    headers: new HttpHeaders({'Content-Type':'application/json'})
+  }
+>>>>>>> b7d27347f425e07bf9a925e9cd94a2a23e664fbd
   constructor(private http: HttpClient) {}
 
   deleteDog(dog: Dog): Observable<Dog> {
