@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DogsService } from '../../services/dogs.service'
 import { Dog} from '../../models/dogs'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { UserService } from "../../services/users.service";
+
+
 
 @Component({
   selector: 'app-tablero',
@@ -10,10 +13,13 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 })
 export class TableroComponent implements OnInit {
   faTrash = faTrash;
-  constructor( private dogService:DogsService ) { }
+  constructor( private dogService:DogsService, logged:UserService ) { }
 
 dogs$:Dog[];
 
+islogged(){
+  return  !!localStorage.getItem('token');
+}
   getDogs():void{
     this.dogService.getDogs().subscribe(dogs => this.dogs$ = dogs);
   };

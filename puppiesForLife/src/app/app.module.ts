@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { RegisterDogsComponent } from './components/register-dogs/register-dogs.component'
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { RegisterDogsComponent } from './components/register-dogs/register-dogs.
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

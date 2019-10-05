@@ -11,7 +11,7 @@ import { CssSelector } from "@angular/compiler";
 
 export class DogsService {
   httpOptions = {
-    headers: new HttpHeaders({'Content-Type':'applicaation/json'})
+    headers: new HttpHeaders({'Content-Type':'application/json'})
   }
   constructor(private http: HttpClient) {}
 

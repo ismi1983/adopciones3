@@ -11,7 +11,7 @@
                   <p class="card-text">{{dog.description}}</p>
                   
                 </div>
-                <button 
+                <button *ngIf="islogged()"
                   class="btn btn-danger" (click)="deleteDog(dog)"><span>
                     <fa-icon [icon]="faTrash"></fa-icon>
                   </span>
