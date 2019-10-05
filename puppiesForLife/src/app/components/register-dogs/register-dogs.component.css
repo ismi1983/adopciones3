@@ -38,3 +38,6 @@
 label {
   color: white;
 }
+.sexDog {
+  height: calc(1.5em + 0.99rem + 2px);
+}

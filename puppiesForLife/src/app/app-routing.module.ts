@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: "adopcion", component: TableroComponent },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
-  { path: "registerDog", component: RegisterDogsComponent }
+  { path: "registerDog", component: RegisterDogsComponent },
+  { path: "signup", component: SignupComponent }
 ];
 
 @NgModule({
