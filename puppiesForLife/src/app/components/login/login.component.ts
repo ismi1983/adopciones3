@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
   private submitData(form: User): void {
     this.userService.postUser(form).subscribe(
       res => {
-        console.log("data", res.data.token);
         localStorage.setItem("token", res.data.token);
         this.router.navigate(["/registerDog"]);
       },
