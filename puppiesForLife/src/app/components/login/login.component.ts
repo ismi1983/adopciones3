@@ -17,6 +17,9 @@ import { RegisterDogsComponent } from "../register-dogs/register-dogs.component"
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
+  
+  loginUserData = {}
+  
   faSignInAlt = faSignInAlt;
   faCoffee = faCoffee;
 
@@ -33,6 +36,9 @@ export class LoginComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  loginUser(){
+    console.log(this.loginUserData)
+  }
   msjLogin: string;
   onLogin(data: FormGroup): void {
     if (data.valid) {

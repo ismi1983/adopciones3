@@ -10,24 +10,16 @@
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <label>Nombre</label>
-                <input
-                  type="text"
-                  formControlName="name"
-                  class="form-control"
-                />
+                <input type="text" formControlName="name" class="form-control" />
               </div>
 
               <div class="form-group col-sm-6">
                 <label>Edad (años/meses)</label>
-                <input
-                  type="number"
-                  formControlName="age"
-                  class="form-control"
-                />
+                <input type="number" formControlName="age" class="form-control" />
               </div>
               <div class="form-group col-sm-6">
                 <label for="Select1">Sexo</label>
-                <select formControlName="sex" class="form-control">
+                <select formControlName="sex" class="sexDog form-control">
                   <option>Macho</option>
                   <option>Hembra</option>
                 </select>
@@ -35,20 +27,12 @@
 
               <div class="form-group col-sm-6">
                 <label>Agregar una imagen</label>
-                <input
-                  type="text"
-                  formControlName="profileImg"
-                  class="form-control"
-                />
+                <input type="text" formControlName="imgUrl" class="form-control" />
               </div>
 
               <div class="form-group col-sm-12">
                 <label for="lTextarea1">Descripción</label>
-                <textarea
-                  formControlName="description"
-                  class="form-control"
-                  rows="3"
-                ></textarea>
+                <textarea formControlName="description" class="form-control" rows="3"></textarea>
               </div>
             </div>
 
