@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/users';
-import { Response } from '../models/loginResponse';
+import { ResponseLogin } from '../models/loginResponse';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { REPLServer } from 'repl';
 
 @Injectable({
         providedIn:'root',
@@ -20,12 +19,9 @@ export class UserService{
       }
     constructor(private http:HttpClient){}
 
-    postUser(user:User):Observable<Response>{
+    postUser(user:User):Observable<ResponseLogin>{
         console.log(user)
-       return this.http.post<Response>(this.usrUrl,user)
-    //    .pipe(tap((newUser:User ) => console.log('Usuario creado')),
-    //        catchError(this.handleError<User>('Crear usuario'))
-    //    );
+       return this.http.post<ResponseLogin>(this.usrUrl,user);
     }
 
     // private handleError<T> (operation = 'operation', result?:T){
