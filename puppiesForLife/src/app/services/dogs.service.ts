@@ -8,18 +8,19 @@ import { CssSelector } from "@angular/compiler";
 @Injectable({
   providedIn: "root"
 })
-
 export class DogsService {
   httpOptions = {
-    headers: new HttpHeaders({'Content-Type':'application/json'})
-  }
+    headers: new HttpHeaders({ "Content-Type": "application/json" })
+  };
   constructor(private http: HttpClient) {}
 
-  deleteDog(dog:Dog):Observable<Dog> {
-    
+  deleteDog(dog: Dog): Observable<Dog> {
     const id = dog.id;
     console.log(`${environment.apiUrl}/${id}`);
-    return this.http.delete<Dog>(`${environment.apiUrl}/${id}`,this.httpOptions);
+    return this.http.delete<Dog>(
+      `${environment.apiUrl}/${id}`,
+      this.httpOptions
+    );
     // console.log('Dog has been is erased');
   }
 
@@ -28,8 +29,7 @@ export class DogsService {
     return this.http.get<Dog[]>(environment.apiUrl);
   }
 
-
-public createDog(dog:Dog):Observable<Dog>{
-  return this.http.post<Dog>(environment.apiUrl, dog);
-}
+  public createDog(dog: Dog): Observable<Dog> {
+    return this.http.post<Dog>(environment.apiUrl, dog);
+  }
 }
