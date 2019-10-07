@@ -18,9 +18,9 @@ export class UserService {
   };
   constructor(private http: HttpClient) {}
 
-  postUser(user: User): Observable<User> {
+  postUser(user: User): Observable<ResponseLogin> {
     console.log(user);
-    return this.http.post<User>(this.usrUrl, user);
+    return this.http.post<ResponseLogin>(this.usrUrl, user);
   }
 
   addUser(user: User): Observable<ResponseLogin> {

@@ -17,9 +17,10 @@ export class DogsService {
 
   deleteDog(dog: Dog): Observable<Dog> {
     const id = dog.id;
-    console.log(`${environment.apiUrl}/${id}`);
+    console.log(id)
+    console.log(`${environment.apiUrl}/dog/deleteDog/${id}`);
     return this.http.delete<Dog>(
-      `${environment.apiUrl}/${id}`,
+      `${environment.apiUrl}/dog/deleteDog/${id}`,
       this.httpOptions
     );
     // console.log('Dog has been is erased');
