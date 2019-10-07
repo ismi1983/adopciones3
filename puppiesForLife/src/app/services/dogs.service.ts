@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Dog } from "../models/dogs";
+import { ResponseGet } from '../models/ResponseGet';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
@@ -24,9 +25,9 @@ export class DogsService {
     // console.log('Dog has been is erased');
   }
 
-  public getDogs(): Observable<Dog[]> {
-    console.log(this.http.get<Dog[]>(environment.apiUrl));
-    return this.http.get<Dog[]>(`${environment.apiUrl}/dog/getDogs`,this.httpOptions);
+  public getDogs(): Observable<ResponseGet> {
+    console.log(this.http.get<ResponseGet>(environment.apiUrl));
+    return this.http.get<ResponseGet>(`${environment.apiUrl}/dog/getDogs`,this.httpOptions);
   }
 
   public createDog(dog: Dog): Observable<Dog> {

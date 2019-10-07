@@ -14,7 +14,7 @@ export class UserService {
   // user:User;
 
   httpOptions = {
-    headers: new HttpHeaders({ "Content-Type": "application/json", "Authorization":"dsfa" })
+    headers: new HttpHeaders({ "Content-Type": "application/json"})
   };
   constructor(private http: HttpClient) {}
 
@@ -45,7 +45,7 @@ export class UserService {
   // }
 
   loggedin() {
-    return !!localStorage.getItem("Authorization");
+    return !!localStorage.getItem("token");
   }
 
   getToken() {    
