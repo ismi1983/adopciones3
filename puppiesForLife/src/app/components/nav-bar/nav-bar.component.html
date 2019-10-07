@@ -71,8 +71,9 @@
         class="dropdown-menu navbar-bgDark"
         aria-labelledby="dropdownMenuButton"
       >
-        <a class="dropdown-item" routerLink="/login">Iniciar sesión</a>
-        <a class="dropdown-item" href="/signup">Registrarse</a>
+        <a class="dropdown-item" *ngIf="!islogged()" routerLink="/login">Iniciar sesión</a>
+        <a class="dropdown-item" *ngIf="!islogged()" href="/signup">Registrarse</a> 
+        <a class="dropdown-item" *ngIf="islogged()" (click)="logOut()" href="/signup">Cerrar Sesión</a> 
       </div>
     </div>
   </div>

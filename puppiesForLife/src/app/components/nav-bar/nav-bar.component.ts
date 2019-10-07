@@ -18,6 +18,14 @@ export class NavBarComponent implements OnInit {
   faTwitter = faTwitter;
   faInstagram = faInstagram;
 
+  islogged() {
+    return !!localStorage.getItem("token");
+  }
+  logOut(){
+    localStorage.removeItem('token');
+  }
+
+
   constructor() {}
 
   ngOnInit() {}
