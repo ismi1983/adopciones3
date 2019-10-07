@@ -3,7 +3,7 @@
     <div class="col-sm-6 main-section">
       <div class="card">
         <div class="card-body">
-          <form [formGroup]="formDog" (ngSubmit)="submit()">
+          <form [formGroup]="registerForm" (ngSubmit)="onSignUp(registerForm)">
             <div class="title">
               <h3>Regístrate</h3>
             </div>
@@ -12,20 +12,20 @@
                 <label>Nombre</label>
                 <input
                   type="text"
-                  formControlName="name"
+                  formControlName="firstName"
                   class="form-control"
                 />
               </div>
 
               <div class="form-group col-sm-6">
                 <label>Apellido</label>
-                <input type="text" formControlName="age" class="form-control" />
+                <input type="text" formControlName="lastName" class="form-control" />
               </div>
               <div class="form-group col-sm-12">
                 <label>Email</label>
                 <input
                   type="email"
-                  formControlName="age"
+                  formControlName="email"
                   class="form-control"
                 />
               </div>
@@ -33,16 +33,16 @@
               <div class="form-group col-sm-6">
                 <label>Contraseña</label>
                 <input
-                  type="text"
-                  formControlName="profileImg"
+                  type="password"
+                  formControlName="password"
                   class="form-control"
                 />
               </div>
               <div class="form-group col-sm-6">
                 <label>Confirmar contraseña</label>
                 <input
-                  type="text"
-                  formControlName="profileImg"
+                  type="password"
+                  formControlName="validatePassword"
                   class="form-control"
                 />
               </div>
