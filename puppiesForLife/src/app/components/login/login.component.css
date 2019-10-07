@@ -19,9 +19,11 @@
   height: 100px;
   width: 100px;
 }
+
 .form-group {
   margin-bottom: 25px;
 }
+
 .form-group input {
   height: 42px;
   border-radius: 5px;
@@ -29,6 +31,16 @@
   font-size: 18px;
   padding-left: 54px;
 }
+
+/* .form-group::before{
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f406";
+    position: absolute;
+    font-size: 22px;
+    color: #1db1d3;
+    padding-top: 4px;
+} */
+
 .btn {
   background-color: #27c2a5;
   color: #fff;
@@ -37,9 +49,11 @@
   border-radius: 5px;
   border-bottom: 4px solid #219882;
 }
+
 .forgot {
   padding: 5px 0 25px;
 }
+
 .forgot a {
   color: #c2fbfe;
 }
