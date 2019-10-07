@@ -12,7 +12,7 @@ export class RegisterDogsComponent implements OnInit {
   formDog: FormGroup = new FormGroup({
     name: new FormControl("", Validators.required),
     age: new FormControl("", Validators.required),
-    sex: new FormControl("Macho", Validators.required),
+    genre: new FormControl("Male", Validators.required),
     description: new FormControl("", Validators.required),
     imgUrl: new FormControl("", Validators.required)
   });

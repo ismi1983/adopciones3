@@ -11,10 +11,11 @@ import { TableroComponent } from "./components/tablero/tablero.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./components/login/login.component";
 
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { SignupComponent } from "./components/signup/signup.component";
 import { RegisterDogsComponent } from "./components/register-dogs/register-dogs.component";
 import { AuthGuard } from "./auth.guard";
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,11 @@ import { AuthGuard } from "./auth.guard";
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

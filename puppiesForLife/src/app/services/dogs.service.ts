@@ -10,7 +10,7 @@ import { CssSelector } from "@angular/compiler";
 })
 export class DogsService {
   httpOptions = {
-    headers: new HttpHeaders({ "Content-Type": "application/json" })
+    headers: new HttpHeaders({ "Content-Type": "application/json"})
   };
   constructor(private http: HttpClient) {}
 
@@ -26,10 +26,10 @@ export class DogsService {
 
   public getDogs(): Observable<Dog[]> {
     console.log(this.http.get<Dog[]>(environment.apiUrl));
-    return this.http.get<Dog[]>(`${environment.apiUrl}/getDog`);
+    return this.http.get<Dog[]>(`${environment.apiUrl}/dog/getDogs`,this.httpOptions);
   }
 
   public createDog(dog: Dog): Observable<Dog> {
-    return this.http.post<Dog>(`${environment.apiUrl}/addDog`, dog);
+    return this.http.post<Dog>(`${environment.apiUrl}/dog/addDog`, dog, this.httpOptions);
   }
 }

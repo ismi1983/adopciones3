@@ -19,7 +19,7 @@ export class TableroComponent implements OnInit {
     return !!localStorage.getItem("token");
   }
   getDogs(): void {
-    this.dogService.getDogs().subscribe(dogs => (this.dogs$ = dogs));
+    this.dogService.getDogs().subscribe(dogs => (this.dogs$ = dogs.data));
   }
 
   ngOnInit(): void {

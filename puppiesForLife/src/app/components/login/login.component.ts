@@ -40,12 +40,14 @@ export class LoginComponent implements OnInit {
   private submitData(form: User): void {
     this.userService.postUser(form).subscribe(
       res => {
-        if (res.data.token) {
-          localStorage.setItem("token", res.data.token);
+        localStorage.setItem("token", res.data.token);
           this.router.navigate(["/registerDog"]);
-        } else {
-          this.msjLogin = 'El usuario, o la contraseña no coinciden';
-        }
+          this.userService.getToken();
+        // if (res.data.token) {
+          
+        // } else {
+        //   this.msjLogin = 'El usuario, o la contraseña no coinciden';
+        // }
       },
       err => console.log(err)
     );

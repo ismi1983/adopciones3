@@ -13,13 +13,13 @@ export class UserService {
   // user:User;
 
   httpOptions = {
-    headers: new HttpHeaders({ "Content-Type": "application/json" })
+    headers: new HttpHeaders({ "Content-Type": "application/json", "Authorization":"dsfa" })
   };
   constructor(private http: HttpClient) {}
 
-  postUser(user: User): Observable<ResponseLogin> {
+  postUser(user: User): Observable<User> {
     console.log(user);
-    return this.http.post<ResponseLogin>(this.usrUrl, user);
+    return this.http.post<User>(this.usrUrl, user);
   }
 
   // private handleError<T> (operation = 'operation', result?:T){
@@ -40,5 +40,9 @@ export class UserService {
 
   loggedin() {
     return !!localStorage.getItem("token");
+  }
+
+  getToken() {    
+    return localStorage.getItem("token");
   }
 }
