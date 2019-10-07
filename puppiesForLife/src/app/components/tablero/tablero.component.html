@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cbaf001c26b3f795e88fcea4474944089cac8a20
 <div class="album py-5 ">
   <div class="container">
     <div class="row ">
@@ -12,6 +15,7 @@
           <div class="card-body ">
             <h5 class="card-title">{{ dog.name }}</h5>
             <p class="card-text">{{ dog.description }}</p>
+<<<<<<< HEAD
 =======
 
     <div class="album py-5 ">
@@ -36,6 +40,16 @@
 >>>>>>> b7d27347f425e07bf9a925e9cd94a2a23e664fbd
           </div>
           <button class="btn btn-danger" (click)="deleteDog(dog)">
+=======
+            <p class="card-text">{{ dog.age }}</p>
+            <p class="card-text">{{ dog.sex }}</p>
+          </div>
+          <button
+            *ngIf="islogged()"
+            class="btn btn-danger"
+            (click)="deleteDog(dog)"
+          >
+>>>>>>> cbaf001c26b3f795e88fcea4474944089cac8a20
             <span>
               <fa-icon [icon]="faTrash"></fa-icon>
             </span>

@@ -19,6 +19,7 @@
   margin-bottom: 25px;
 }
 
+<<<<<<< HEAD
 .form-group input {
   height: 42px;
   border-radius: 5px;
@@ -34,6 +35,26 @@
   padding: 7px 14px;
   border-radius: 5px;
   border-bottom: 4px solid #219882;
+=======
+
+.form-group input, .form-group textarea {
+    height: 42px;
+    border-radius: 5px;
+    border:0;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+
+
+.btn{
+    background-color: #27c2a5;
+    color: #fff;
+    font-size: 19px;
+    padding: 7px 14px;
+    border-radius: 5px;
+    border-bottom: 4px solid #219882;
+>>>>>>> cbaf001c26b3f795e88fcea4474944089cac8a20
 }
 label {
   color: white;

@@ -12,6 +12,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./components/login/login.component";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { HttpClientModule } from "@angular/common/http";
 import { SignupComponent } from "./components/signup/signup.component";
 import { RegisterDogsComponent } from "./components/register-dogs/register-dogs.component";
@@ -25,6 +26,12 @@ import { SignupComponent } from './components/signup/signup.component';
 import { RegisterDogsComponent } from './components/register-dogs/register-dogs.component'
 import { AuthGuard } from './auth.guard';
 >>>>>>> b7d27347f425e07bf9a925e9cd94a2a23e664fbd
+=======
+import { HttpClientModule } from "@angular/common/http";
+import { SignupComponent } from "./components/signup/signup.component";
+import { RegisterDogsComponent } from "./components/register-dogs/register-dogs.component";
+import { AuthGuard } from "./auth.guard";
+>>>>>>> cbaf001c26b3f795e88fcea4474944089cac8a20
 
 @NgModule({
   declarations: [

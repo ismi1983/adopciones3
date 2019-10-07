@@ -1,6 +1,6 @@
-<div class="container mb-5">
+<div class="container mb-5 ">
   <div class="row">
-    <div class="col-sm-6 main-section">
+    <div class="col-sm-12 col-md-12 col-lg-6 main-section">
       <div class="card">
         <div class="card-body">
           <form [formGroup]="formDog" (ngSubmit)="submit()">
@@ -8,6 +8,7 @@
               <h3>Registrar perro</h3>
             </div>
             <div class="form-row">
+<<<<<<< HEAD
               <div class="form-group col-sm-6">
                 <label>Nombre</label>
                 <input type="text" formControlName="name" class="form-control" />
@@ -28,11 +29,56 @@
               <div class="form-group col-sm-6">
                 <label>Agregar una imagen</label>
                 <input type="text" formControlName="imgUrl" class="form-control" />
+=======
+             
+                <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                  <label>Nombre</label>
+                  <input type="text" formControlName="name" class="form-control" placeholder="Nombre">
+                </div>
+
+                <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                  <label>Edad (años/meses)</label>
+                  <input type="number" formControlName="age" class="form-control" placeholder="Edad">
+                </div>
+                <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                  <label for="Select1">Sexo</label>
+                  <select formControlName="sex" class="form-control">
+                    <option value="Macho" selected>Macho</option>
+                    <option value="Hembra">Hembra</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                    <label>Agregar una imagen</label>
+                    <input type="text" formControlName="imgUrl" class="form-control" placeholder="Ruta de la iamgen">
+                  </div>
+
+                <div class="form-group col-sm-12 col-md-12 col-lg-6 ">
+                  <label for="lTextarea1">Descripción</label> 
+                  <textarea formControlName="description" class="form-control" rows="1" placeholder="Descripcion"></textarea>
+                </div>
+
+              <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                <label>Agregar una imagen</label>
+                <input
+                  type="text"
+                  formControlName="imgUrl"
+                  class="form-control"
+                />
+>>>>>>> cbaf001c26b3f795e88fcea4474944089cac8a20
               </div>
 
               <div class="form-group col-sm-12">
                 <label for="lTextarea1">Descripción</label>
+<<<<<<< HEAD
                 <textarea formControlName="description" class="form-control" rows="3"></textarea>
+=======
+                <textarea
+                  formControlName="description"
+                  class="form-control"
+                  rows="3"
+                ></textarea>
+>>>>>>> cbaf001c26b3f795e88fcea4474944089cac8a20
               </div>
             </div>
 

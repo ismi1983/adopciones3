@@ -12,6 +12,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {}
 
+<<<<<<< HEAD
   users: User[];
   postUser(user: User): void {
     if (!user) {
@@ -21,4 +22,16 @@ export class SignupComponent implements OnInit {
       this.users.push(user);
     });
   }
+=======
+  //   users:User[];
+  //   postUser(user:User):void{
+  //     if (!user) {
+  //       return;
+  //     }
+  //     this.userService.postUser(user)
+  //     .subscribe( user => {
+  //       this.users.push(user);
+  //     })
+  //   }
+>>>>>>> cbaf001c26b3f795e88fcea4474944089cac8a20
 }
