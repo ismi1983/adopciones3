@@ -10,6 +10,7 @@ import { catchError, map, tap } from "rxjs/operators";
 })
 export class UserService {
   usrUrl: string = "http://localhost:3000/api/user/login";
+  addUrl: string = "http://localhost:3000/api/user/";
   // user:User;
 
   httpOptions = {
@@ -20,6 +21,11 @@ export class UserService {
   postUser(user: User): Observable<ResponseLogin> {
     console.log(user);
     return this.http.post<ResponseLogin>(this.usrUrl, user);
+  }
+
+  addUser(user: User): Observable<ResponseLogin> {
+    console.log(user);
+    return this.http.post<ResponseLogin>(this.addUrl, user);
   }
 
   // private handleError<T> (operation = 'operation', result?:T){
@@ -39,6 +45,6 @@ export class UserService {
   // }
 
   loggedin() {
-    return !!localStorage.getItem("token");
+    return !!localStorage.getItem("Authorization");
   }
 }
