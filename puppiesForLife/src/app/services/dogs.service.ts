@@ -26,10 +26,10 @@ export class DogsService {
 
   public getDogs(): Observable<Dog[]> {
     console.log(this.http.get<Dog[]>(environment.apiUrl));
-    return this.http.get<Dog[]>(environment.apiUrl);
+    return this.http.get<Dog[]>(`${environment.apiUrl}/getDog`);
   }
 
   public createDog(dog: Dog): Observable<Dog> {
-    return this.http.post<Dog>(environment.apiUrl, dog);
+    return this.http.post<Dog>(`${environment.apiUrl}/addDog`, dog);
   }
 }

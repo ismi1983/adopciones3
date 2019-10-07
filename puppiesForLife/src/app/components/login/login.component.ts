@@ -25,13 +25,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
 
-  // msjLogin:string;
+  msjLogin:string;
 
   onLogin(data: FormGroup): void {
     if (data.valid) {
       this.submitData(data.value);
     } else {
-      // this.msjLogin = 'El usuario o la contrseña no coinciden.';
+      this.msjLogin = 'El usuario o la contrseña no coinciden.';
       alert("Data not valid");
       return;
     }
@@ -40,8 +40,12 @@ export class LoginComponent implements OnInit {
   private submitData(form: User): void {
     this.userService.postUser(form).subscribe(
       res => {
-        localStorage.setItem("token", res.data.token);
-        this.router.navigate(["/registerDog"]);
+        if (res.data.token) {
+          localStorage.setItem("token", res.data.token);
+          this.router.navigate(["/registerDog"]);
+        } else {
+          this.msjLogin = 'El usuario, o la contraseña no coinciden';
+        }
       },
       err => console.log(err)
     );

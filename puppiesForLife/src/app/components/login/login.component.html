@@ -1,10 +1,10 @@
+<ng-container *ngIf="msjLogin">
+  <div class="alert alert-danger" role="alert">
+    <img src="assets/img/kitty.svg" alt="Mad Kitty" class="alert-icon" />
+    {{ msjLogin }}
+  </div>
+</ng-container>
 <div class="modal-dialog text-center">
-  <ng-container *ngIf="msjLogin">
-    <div class="alert alert-danger" role="alert">
-      <img src="assets/img/kitty.svg" alt="Mad Kitty" class="alert-icon" />
-      {{ msjLogin }}
-    </div>
-  </ng-container>
   <div class="col-sm-8 main-section">
     <div class="modal-content">
       <div class="col-12 user-img">
