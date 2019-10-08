@@ -32,6 +32,7 @@ export class RegisterDogsComponent implements OnInit {
   }
 
   private submitData(form: Dog): void {
-    this.dogService.createDog(form).subscribe(data => {});
+    this.dogService.createDog(form).subscribe();
+    this.formDog.reset();
   }
 }
