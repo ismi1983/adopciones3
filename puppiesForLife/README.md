@@ -1,27 +1,66 @@
 # PuppiesForLife
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+Este proyecto fue creado con Angular para el FrontEnd y node.js (express) para el Backend
 
-## Development server
+## Antes de comenzar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Antes de comenzar corriendo el proyecto, debes dirigirte desde la consola a las carpetas tanto del proyecto de FrontEnd y de BackEnd y correr el comando `npm install`.
 
-## Code scaffolding
+En algunos casos puede aparecer el error al intentar instalar los paquetes de BackEnd :
+`npm ERR! Failed at the bcrypt@3.0.6 install script`.
+Para solucionar este error debe:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Escribir el siguiente comando en la consola:
+  - npm uninstall --save bcrypt
+- Y después:
+  - npm install --save bcryptjs
+- Al final debe cambiar `const bcrypt = require('bcrypt')` por `const bcrypt = require('bcryptjs');` dentro de los archivos:
+  - services/users/login.js
+  - services/users/signUp.js
 
-## Build
+Seguido de esto ustede deberá ingresar los scripts de la carpeta `DB_adoptions` en su base de datos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+También debe crear un archivo `.env.default`donde debe agregar lo siguiente:
 
-## Running unit tests
+~~~
+  DB_HOST = localhost
+  DB_PORT = (3306)
+  DB_USER = (usuario)
+  DB_PASSWORD = (contraseña)
+  DB_NAME = adoptions
+  APP_PORT = (3000)
+  ENV = default
+  TOKEN_SECRET = supersecreto
+~~~
+Donde deberá cambiar los valores entre parentesis por los de su preferencia.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Iniciar Servidor FrontEnd
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Desde la consola, apuntando a la carpeta del proyecto corre el comando `ng serve` para iniciar el servidor FrontEnd. Desde el navegador introduce `http://localhost:4200/`.
 
-## Further help
+## Iniciar Servidor BackEnd
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Desde una nueva consola, apuntando a la carpeta del proyecto node.js corre el comando `node ./index.js` para iniciar el servidor BackEnd.
+
+# Interfaz
+
+## Adopciones
+
+Desde aquí podras ver la información de los perritos en adopción.
+
+Si quieres `elmininar` un perrito del tablero, debes `iniciar sesión` antes.
+
+## Registrar Perro
+
+Puedes `registrar un perro nuevo` para el tablero si has iniciado sesión e ingresas los datos que se piden en el formulario.
+
+## Iniciar Sesión
+
+Si tienes una cuenta creada puedes iniciar sesión para comenzar a agregar o eliminar perros del tablero. El botón de iniciar sesion se encuentra sobre el botón en la ezquina superior derecha en el nav.
+
+## Regsitrarte
+
+Puedes registrarte para comenzar a usar el sistema con derechos de usuario.
+
+##### _Urbano, Viri y Ricardo_
