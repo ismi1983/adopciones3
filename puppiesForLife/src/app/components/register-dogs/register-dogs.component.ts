@@ -28,6 +28,7 @@ export class RegisterDogsComponent implements OnInit {
       alert("Data not valid");
       return;
     }
+    alert("El perro ha sido registrado")
     this.submitData(form.value);
   }
 
